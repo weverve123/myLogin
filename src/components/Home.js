@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import SignIn from './SignIn';
 import auth, { firebase } from '@react-native-firebase/auth';
 import ProfileDetails from './ProfileDetails';
+import UplodeImage from './UplodeImage';
 
 export default function Home({navigation}) {
 
@@ -60,6 +61,16 @@ export default function Home({navigation}) {
         </TouchableOpacity>
        </View>
 
+       <View>
+        <TouchableOpacity
+        onPress={()=>navigation.navigate(UplodeImage)}
+        >
+        <View style={styles.takeImagesbtn}>
+            <Text style={{fontSize:20,fontWeight:"bold",color:"white"}}>Take Iamge</Text>
+        </View>
+        </TouchableOpacity>
+       </View>
+
        <View style={styles.logOutBtn}>
          <TouchableOpacity
           onPress={()=>handleLogout()}
@@ -95,5 +106,14 @@ const styles = StyleSheet.create({
     logOutBtn:{
         height:40,
         top:60
+    },
+    takeImagesbtn:{
+        top:40,
+        height:50,
+        width:300,
+        justifyContent:"center",
+        alignItems:"center",
+        backgroundColor:"#FF4E00",
+        borderRadius:10
     }
 });

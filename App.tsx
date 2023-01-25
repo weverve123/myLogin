@@ -7,6 +7,7 @@ import SignIn from './src/components/SignIn';
 import Home from './src/components/Home';
 import Todo from './src/components/Todo';
 import ProfileDetails from './src/components/ProfileDetails';
+import UplodeImage from './src/components/UplodeImage';
 const Stack = createStackNavigator();
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
            <Stack.Screen name='Home' component={Home} options={{headerShown:false}}/>
            <Stack.Screen name='Todo'component={Todo} options={{headerShown:false}}/>
            <Stack.Screen name='ProfileDetails' component={ProfileDetails} options={{headerShown:false}}/>
+           <Stack.Screen name='UplodeImage' component={UplodeImage} options={{headerShown:false}}/>
         </Stack.Navigator>
      </NavigationContainer>
   )
